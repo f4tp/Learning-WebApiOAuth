@@ -59,8 +59,8 @@ namespace MVCDemo
             app.UseTwitterAuthentication(new TwitterAuthenticationOptions
             {
                 //add these in without saving / uploading to Git
-                ConsumerKey = "XXXX",
-                ConsumerSecret = "XXXX",
+                ConsumerKey = "ENTER THE CONSUMER KEY",
+                ConsumerSecret = "ENTER THE CONSUMER SECRET",
                 BackchannelCertificateValidator = new CertificateSubjectKeyIdentifierValidator(new[]
                     {
                         "A5EF0B11CEC04103A34A659048B21CE0572D7D47", // VeriSign Class 3 Secure Server CA - G2

@@ -6,13 +6,16 @@ using System.Web.Mvc;
 
 namespace MVCDemo.Controllers
 {
+    //[Authorize]
     public class HomeController : Controller
     {
+        [Authorize]
         public ActionResult Index()
         {
             return View();
         }
 
+        [Authorize(Roles ="Admin")]
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -20,6 +23,7 @@ namespace MVCDemo.Controllers
             return View();
         }
 
+        [Authorize(Roles = "User, Admin")]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
